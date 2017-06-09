@@ -19,7 +19,7 @@ es = Elasticsearch(elastichost)
 
 network = pylast.LastFMNetwork(api_key=API_KEY, api_secret=API_SECRET)
 
-recent_tracks = network.get_user(user).get_recent_tracks(limit=200)
+recent_tracks = network.get_user(user).get_recent_tracks(limit=limit)
 
 for track in recent_tracks:
   trackname = track.track.get_name()
